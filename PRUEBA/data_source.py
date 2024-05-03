@@ -1,43 +1,17 @@
-#region ############ IMPORTS & CONSTANTS ############
-import utils
+import logging
 import os
-import crazy_words
-import utils
-
+import config
 def get_dir_content(DIRECTORI):
     if os.path.isdir(DIRECTORI):
         contingut_directori = os.listdir(DIRECTORI)
         contingut_directori.sort()
-    else:
-        print("Has d'introduïr un directori.")
-    return contingut_directori
-
-def mix_file_content(contingut_directori):
-    try:
-        for fitxer in contingut_directori:
-            fitxer_sortida=os.path.join('sortida', f'{fitxer}_boges.txt')
-            ruta_fitxer = os.path.join(DIRECTORI, fitxer)
-            print(ruta_fitxer)
-
-            if os.path.isfile(ruta_fitxer) and '.txt' in fitxer:
-                with open(ruta_fitxer, mode='rt', encoding='utf-8') as f:
-                    contingut_boig=[]
-                    contingut_fitxer= f.readlines()
-
-                    for line in contingut_fitxer:
-                        linea_boja=crazy_words.crazy_text(line).strip()
-                        contingut_boig.append(linea_boja + '\n')
-
-                    contingut_exit="".join([str(elem) for elem in contingut_boig])
-
-                    with open(fitxer_sortida, mode='wt', encoding='utf-8') as exit_file:
-                            exit_file.write(contingut_exit[:-1])
+        return contingut_directori
 
 
-    except UnicodeDecodeError:
-        utils.displayError(f"No s'ha pogut processar el fitxer {ruta_fitxer}")
+def get_file_path(DIRECTORI_ENTRADA, DIRECTORI_SORTIDA, fitxer):
+        fitxer_sortida=os.path.join(DIRECTORI_SORTIDA, f'{fitxer}_boges.txt')
+        ruta_fitxer = os.path.join(DIRECTORI_ENTRADA, fitxer)
+        logging.info(f'PROCESSING: {ruta_fitxer}')
+        return fitxer_sortida, ruta_fitxer
 
-DIRECTORI = "entrada"
-contingut_directori=get_dir_content(DIRECTORI)
-mix_file_content(contingut_directori)
 

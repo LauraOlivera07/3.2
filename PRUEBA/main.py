@@ -1,27 +1,21 @@
-"""
-David Martinez - Laura Olivera
-ASIXc1A - M03 UF2
-Projecte - Paraules boges - Release 1
-Descripcio:
-L'usuari introdueix una frase (minim d'una paraula) i el programa te que retornar la mateixa frase pero
-"randomitzant" els caracters de totes les frases exceptuant el primer i l'ultim.
-
-En aquest release l'hem fet modular:
-    - crazy_words.py - Funcions de la fase de procesament de dades
-    - data_source.py - Funcions de la fase d'obtencio de dades
-    - main.py        - Fitxer principal del projecte
-    - utils.py       - Funcions varies (validacio de text i errors)
-
-Cal instalar el modul de openai (pip install openai)
-Cal afegir les API Key a les constants del fitxer data_source.py
-"""
-import data_source, crazy_words
-
+import data_source
+import write_words
+import logger
+import config
+import utils
 def main():
-    text = data_source.get_data()
+    puede_empezar= utils.check_folders(config.LOG_DIRECTORY, config.DIRECTORI_ENTRADA, config.DIRECTORI_SORTIDA)
+    if puede_empezar== True:
+        logger.info('======================================================')
+        logger.info('Program started')
 
-    if text:
-        print(crazy_words.crazy_text(text))
+        contingut_directori = data_source.get_dir_content(config.DIRECTORI_ENTRADA)
+        if contingut_directori:
+            write_words.write_mixed_content(config.DIRECTORI_ENTRADA, contingut_directori)
+        else:
+            logger.error("Not able to read directory content")
+        logger.info('Program ended')
 
 if __name__ == '__main__':
-    main()  
+
+    main()

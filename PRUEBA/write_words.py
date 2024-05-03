@@ -1,42 +1,20 @@
-#region ############ IMPORTS & CONSTANTS ############
+import logging
+import config
+import data_source
 import utils
-import os
-import crazy_words
-import utils
+import mix_content
+import logger
+def write_in_file(contingut_exit, fitxer_sortida):
+    with open(fitxer_sortida, mode='wt', encoding='utf-8') as exit_file:
+        exit_file.write(contingut_exit[:-1])
 
-def get_dir_content(DIRECTORI):
-    if os.path.isdir(DIRECTORI):
-        contingut_directori = os.listdir(DIRECTORI)
-        contingut_directori.sort()
-    else:
-        print("Has d'introduïr un directori.")
-    return contingut_directori
-
-def mix_file_content(contingut_directori):
+def write_mixed_content(DIRECTORI, contingut_directori):
     try:
         for fitxer in contingut_directori:
-            fitxer_sortida=os.path.join('sortida', f'{fitxer}_boges.txt')
-            ruta_fitxer = os.path.join(DIRECTORI, fitxer)
-            print(ruta_fitxer)
-
-            if os.path.isfile(ruta_fitxer) and '.txt' in fitxer:
-                with open(ruta_fitxer, mode='rt', encoding='utf-8') as f:
-                    contingut_boig=[]
-                    contingut_fitxer= f.readlines()
-
-                    for line in contingut_fitxer:
-                        linea_boja=crazy_words.crazy_text(line).strip()
-                        contingut_boig.append(linea_boja + '\n')
-
-                    contingut_exit="".join([str(elem) for elem in contingut_boig])
-
-                    with open(fitxer_sortida, mode='wt', encoding='utf-8') as exit_file:
-                            exit_file.write(contingut_exit[:-1])
-
+            ruta_fitxer_sortida, ruta_fitxer_entrada= data_source.get_file_path(config.DIRECTORI_ENTRADA, config.DIRECTORI_SORTIDA, fitxer)
+            contingut_exit=mix_content.mix_file_content(ruta_fitxer_entrada, fitxer)
+            if contingut_exit:
+                write_in_file(contingut_exit, ruta_fitxer_sortida)
 
     except UnicodeDecodeError:
-        utils.displayError(f"No s'ha pogut processar el fitxer {ruta_fitxer}")
-
-DIRECTORI = "entrada"
-contingut_directori=get_dir_content(DIRECTORI)
-mix_file_content(contingut_directori)
+       logger.error(f"No s'ha pogut processar el fitxer {ruta_fitxer_entrada}")

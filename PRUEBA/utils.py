@@ -1,3 +1,5 @@
+import os
+import logger
 #region ######## VALIDATION ########
 def is_mail(text):
     """
@@ -25,18 +27,14 @@ def is_url_or_filename(text):
 #endregion
 
 #region ########## ERRORS ##########
-def displayError(e):
-    """
-    Display an error\n
-    Void string to generic error\n
-    displayError(string) -> void\n
-    Pass an exception message could break the code, use this func to display custom errors!
-    """
-    RED = '\033[31m'
-    WHITE = '\033[0m'
 
-    if e != '':
-        print(RED + '[!] Error: ' + e + '!' + WHITE)
+def check_folders(LOG_DIRECTORY, DIRECTORI_ENTRADA, DIRECTORI_SORTIDA):
+    directoris= os.listdir('.')
+    if LOG_DIRECTORY not in directoris:
+        print('ERROR, NO ES POT COMENÇAR PERQUÈ NO ES TROBA EL LOG')
+    elif DIRECTORI_ENTRADA not in directoris:
+        logger.error("NO ES POT COMENÇAR: NO ES POT TROBAR EL DIRECTORI D'ENTRADA")
+    elif DIRECTORI_SORTIDA not in directoris:
+        logger.error("NO ES POT COMENÇAR: NO ES POT TROBAR EL DIRECTORI DE SORTIDA")
     else:
-        print(RED + '[!] Error generic!' + WHITE)
-#endregion
+        return True

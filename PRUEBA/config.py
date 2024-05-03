@@ -1,8 +1,13 @@
-# API Key from Ninjas API (https://api-ninjas.com/api/)
-NINJAS_API_KEY = 'YOUR-API-KEY'
+import os
 
-# API Key from OpenAI (https://platform.openai.com/api-keys)
-OPENAI_API_KEY = 'YOUR-API-KEY'
+DIRECTORI_ENTRADA = "entrada"
+DIRECTORI_SORTIDA = "sortida"
 
-# Lang that ChatGPT will use to generate text
-CHATGPT_LANG = 'Catalan'
+LOG_DIRECTORY = 'log'
+LOG_FILE = 'boges.log'
+LOG_PATH = os.path.join(LOG_DIRECTORY,LOG_FILE)
+
+LOG_FORMAT = '%(asctime)s %(levelname)s %(message)s'
+LOG_MODE = 'a'
+
+
