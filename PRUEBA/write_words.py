@@ -40,4 +40,3 @@ def mix_file_content(contingut_directori):
 DIRECTORI = "entrada"
 contingut_directori=get_dir_content(DIRECTORI)
 mix_file_content(contingut_directori)
-
