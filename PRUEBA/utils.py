@@ -31,7 +31,7 @@ def is_url_or_filename(text):
 def check_folders(LOG_DIRECTORY, DIRECTORI_ENTRADA, DIRECTORI_SORTIDA):
     directoris= os.listdir('.')
     if LOG_DIRECTORY not in directoris:
-        print('ERROR, NO ES POT COMENÇAR PERQUÈ NO ES TROBA EL LOG')
+        print('ERROR, NO ES POT COMENÇAR PERQUÈ NO ES TROBA EL DIRECTORI DEL LOG')
     elif DIRECTORI_ENTRADA not in directoris:
         logger.error("NO ES POT COMENÇAR: NO ES POT TROBAR EL DIRECTORI D'ENTRADA")
     elif DIRECTORI_SORTIDA not in directoris:

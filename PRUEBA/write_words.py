@@ -6,7 +6,7 @@ import mix_content
 import logger
 def write_in_file(contingut_exit, fitxer_sortida):
     with open(fitxer_sortida, mode='wt', encoding='utf-8') as exit_file:
-        exit_file.write(contingut_exit[:-1])
+        exit_file.write(contingut_exit)
 
 def write_mixed_content(DIRECTORI, contingut_directori):
     try:
