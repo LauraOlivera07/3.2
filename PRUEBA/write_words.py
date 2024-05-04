@@ -17,4 +17,4 @@ def write_mixed_content(DIRECTORI, contingut_directori):
                 write_in_file(contingut_exit, ruta_fitxer_sortida)
 
     except UnicodeDecodeError:
-       logger.error(f"No s'ha pogut processar el fitxer {ruta_fitxer_entrada}")
+       logger.error(f"Not able to process {ruta_fitxer_entrada}")

@@ -3,9 +3,12 @@ import write_words
 import logger
 import config
 import utils
+import time
+
 def main():
     puede_empezar= utils.check_folders(config.LOG_DIRECTORY, config.DIRECTORI_ENTRADA, config.DIRECTORI_SORTIDA)
     if puede_empezar== True:
+        start=time.time()
         logger.info('======================================================')
         logger.info('Program started')
 
@@ -14,7 +17,7 @@ def main():
             write_words.write_mixed_content(config.DIRECTORI_ENTRADA, contingut_directori)
         else:
             logger.error("Not able to read directory content")
-        logger.info('Program ended')
+        logger.info(f'Program ended. TIME ELAPSED: {utils.calculate_time(start)}')
 
 if __name__ == '__main__':
 
