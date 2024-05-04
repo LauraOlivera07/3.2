@@ -1,5 +1,5 @@
-import os
-import crazy_words
+import os, crazy_words
+
 def mix_file_content(ruta_fitxer_entrada, fitxer):
     if os.path.isfile(ruta_fitxer_entrada) and fitxer.endswith('.txt'):
         with open(ruta_fitxer_entrada, mode='rt', encoding='utf-8') as f:

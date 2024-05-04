@@ -1,7 +1,5 @@
-import os
-import time
-import datetime
-import logger
+import os, time, datetime, logger
+
 #region ######## VALIDATION ########
 def is_mail(text):
     """

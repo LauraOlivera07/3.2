@@ -1,9 +1,5 @@
-import logging
-import config
-import data_source
-import utils
-import mix_content
-import logger
+import logging, config, data_source, utils, mix_content, logger
+
 def write_in_file(contingut_exit, fitxer_sortida):
     with open(fitxer_sortida, mode='wt', encoding='utf-8') as exit_file:
         exit_file.write(contingut_exit)

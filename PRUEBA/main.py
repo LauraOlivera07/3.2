@@ -1,9 +1,4 @@
-import data_source
-import write_words
-import logger
-import config
-import utils
-import time
+import data_source, write_words, logger, config, utils, time
 
 def main():
     puede_empezar= utils.check_folders(config.LOG_DIRECTORY, config.DIRECTORI_ENTRADA, config.DIRECTORI_SORTIDA)

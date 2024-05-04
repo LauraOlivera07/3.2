@@ -1,6 +1,5 @@
-import logging
-import os
-import config
+import logging, os, config
+
 def get_dir_content(DIRECTORI):
     if os.path.isdir(DIRECTORI):
         contingut_directori = os.listdir(DIRECTORI)
