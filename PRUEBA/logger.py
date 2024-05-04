@@ -1,6 +1,4 @@
-import logging, config
-
-logging.basicConfig(level=logging.DEBUG,format=config.LOG_FORMAT,filename=config.LOG_PATH,filemode=config.LOG_MODE)
+import logging, config, os
 
 def debug(msg=''):
     logging.debug(msg)
@@ -12,3 +10,9 @@ def error(msg='Error generico'):
 
 def warning(msg='Warning generico'):
     logging.warning(msg)
+
+def iniLog():
+    if config.LOG_DIRECTORY not in os.listdir('.'):
+        os.mkdir(config.LOG_DIRECTORY)
+    logging.basicConfig(level=logging.DEBUG,format=config.LOG_FORMAT,filename=config.LOG_PATH,filemode=config.LOG_MODE)
+    info('======================================================')

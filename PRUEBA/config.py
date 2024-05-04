@@ -9,5 +9,3 @@ LOG_PATH = os.path.join(LOG_DIRECTORY,LOG_FILE)
 
 LOG_FORMAT = '%(asctime)s %(levelname)s %(message)s'
 LOG_MODE = 'a'
-
-

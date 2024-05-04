@@ -1,0 +1,48 @@
+2024-05-05 00:45:14,012 INFO ======================================================
+2024-05-05 00:45:14,012 WARNING Not able to find output directory. Creating...
+2024-05-05 00:45:14,013 INFO Program started
+2024-05-05 00:45:14,022 INFO PROCESSING: entrada\17 LEYES DEL TRABAJO EN EQUIPO.txt
+2024-05-05 00:45:14,361 INFO PROCESSING: entrada\25 MANERAS DE GANARSE A LA GENTE - .txt
+2024-05-05 00:45:14,568 INFO PROCESSING: entrada\Abe Shana - La última sirena.txt
+2024-05-05 00:45:15,302 INFO PROCESSING: entrada\ACTITUD DE VENCEDOR - JOHN C. MAXWELL.txt
+2024-05-05 00:45:15,533 INFO PROCESSING: entrada\diccionari.txt
+2024-05-05 00:45:15,599 INFO PROCESSING: entrada\El Oro Y La Ceniza - Abecassis Eliette .txt
+2024-05-05 00:45:16,163 INFO PROCESSING: entrada\fgfgdfg\17 LEYES DEL TRABAJO EN EQUIPO.txt
+2024-05-05 00:45:16,507 INFO PROCESSING: entrada\fgfgdfg\25 MANERAS DE GANARSE A LA GENTE - .txt
+2024-05-05 00:45:16,714 INFO PROCESSING: entrada\fgfgdfg\Abe Shana - La última sirena.txt
+2024-05-05 00:45:17,442 INFO PROCESSING: entrada\fgfgdfg\ACTITUD DE VENCEDOR - JOHN C. MAXWELL.txt
+2024-05-05 00:45:17,676 INFO PROCESSING: entrada\fgfgdfg\diccionari.txt
+2024-05-05 00:45:17,737 INFO PROCESSING: entrada\fgfgdfg\El Oro Y La Ceniza - Abecassis Eliette .txt
+2024-05-05 00:45:18,317 INFO PROCESSING: entrada\fgfgdfg\paraules.txt
+2024-05-05 00:45:18,336 INFO PROCESSING: entrada\fgfgdfg\SEAMOS PERSONAS DE INFLUENCIA - JOHN MAXWELL.txt
+2024-05-05 00:45:18,619 INFO PROCESSING: entrada\fgfgdfg\te\17 LEYES DEL TRABAJO EN EQUIPO.txt
+2024-05-05 00:45:18,955 INFO PROCESSING: entrada\fgfgdfg\te\25 MANERAS DE GANARSE A LA GENTE - .txt
+2024-05-05 00:45:19,173 INFO PROCESSING: entrada\fgfgdfg\te\Abe Shana - La última sirena.txt
+2024-05-05 00:45:19,913 INFO PROCESSING: entrada\fgfgdfg\te\ACTITUD DE VENCEDOR - JOHN C. MAXWELL.txt
+2024-05-05 00:45:20,144 INFO PROCESSING: entrada\fgfgdfg\te\diccionari.txt
+2024-05-05 00:45:20,205 INFO PROCESSING: entrada\fgfgdfg\te\El Oro Y La Ceniza - Abecassis Eliette .txt
+2024-05-05 00:45:20,781 INFO PROCESSING: entrada\fgfgdfg\te\paraules.txt
+2024-05-05 00:45:20,802 INFO PROCESSING: entrada\fgfgdfg\te\SEAMOS PERSONAS DE INFLUENCIA - JOHN MAXWELL.txt
+2024-05-05 00:45:21,095 INFO PROCESSING: entrada\fgfgdfg\te\VIVE TU SUEÑO - JOHN MAXWELL.txt
+2024-05-05 00:45:21,430 INFO PROCESSING: entrada\fgfgdfg\te\x.txt
+2024-05-05 00:45:21,430 ERROR Not able to process entrada\fgfgdfg\te\x.txt! Skipping...
+2024-05-05 00:45:21,430 INFO PROCESSING: entrada\fgfgdfg\VIVE TU SUEÑO - JOHN MAXWELL.txt
+2024-05-05 00:45:21,810 INFO PROCESSING: entrada\fgfgdfg\x.txt
+2024-05-05 00:45:21,811 ERROR Not able to process entrada\fgfgdfg\x.txt! Skipping...
+2024-05-05 00:45:21,811 INFO PROCESSING: entrada\paraules.txt
+2024-05-05 00:45:21,831 INFO PROCESSING: entrada\SEAMOS PERSONAS DE INFLUENCIA - JOHN MAXWELL.txt
+2024-05-05 00:45:22,121 INFO PROCESSING: entrada\te\17 LEYES DEL TRABAJO EN EQUIPO.txt
+2024-05-05 00:45:22,467 INFO PROCESSING: entrada\te\25 MANERAS DE GANARSE A LA GENTE - .txt
+2024-05-05 00:45:22,697 INFO PROCESSING: entrada\te\Abe Shana - La última sirena.txt
+2024-05-05 00:45:23,441 INFO PROCESSING: entrada\te\ACTITUD DE VENCEDOR - JOHN C. MAXWELL.txt
+2024-05-05 00:45:23,676 INFO PROCESSING: entrada\te\diccionari.txt
+2024-05-05 00:45:23,737 INFO PROCESSING: entrada\te\El Oro Y La Ceniza - Abecassis Eliette .txt
+2024-05-05 00:45:24,310 INFO PROCESSING: entrada\te\paraules.txt
+2024-05-05 00:45:24,329 INFO PROCESSING: entrada\te\SEAMOS PERSONAS DE INFLUENCIA - JOHN MAXWELL.txt
+2024-05-05 00:45:24,610 INFO PROCESSING: entrada\te\VIVE TU SUEÑO - JOHN MAXWELL.txt
+2024-05-05 00:45:24,929 INFO PROCESSING: entrada\te\x.txt
+2024-05-05 00:45:24,929 ERROR Not able to process entrada\te\x.txt! Skipping...
+2024-05-05 00:45:24,930 INFO PROCESSING: entrada\VIVE TU SUEÑO - JOHN MAXWELL.txt
+2024-05-05 00:45:25,250 INFO PROCESSING: entrada\x.txt
+2024-05-05 00:45:25,250 ERROR Not able to process entrada\x.txt! Skipping...
+2024-05-05 00:45:25,250 INFO Program ended. TIME ELAPSED: 0:00:00:11

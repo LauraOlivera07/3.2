@@ -1,13 +1,15 @@
-import data_source, write_words, logger, config, utils, time
+import utils, data_source, write_words, logger, config, time
 
 def main():
+    logger.iniLog()
     puede_empezar= utils.check_folders(config.LOG_DIRECTORY, config.DIRECTORI_ENTRADA, config.DIRECTORI_SORTIDA)
-    if puede_empezar== True:
+    if puede_empezar:
         start=time.time()
-        logger.info('======================================================')
         logger.info('Program started')
 
         contingut_directori = data_source.get_dir_content(config.DIRECTORI_ENTRADA)
+        print(contingut_directori)
+        print()
         if contingut_directori:
             write_words.write_mixed_content(config.DIRECTORI_ENTRADA, contingut_directori)
         else:

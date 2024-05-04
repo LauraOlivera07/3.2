@@ -26,7 +26,7 @@ def get_positions(text):
     # Position of the first and last char of the word
     positions = [0, len(text) - 1]
     
-    # Iterathe through the string to find the bad chars amount at the beginning and end
+    # Iterate through the string to find the bad chars amount at the beginning and end
     while text[positions[0]] not in LETTERS:
         positions[0] += 1
 

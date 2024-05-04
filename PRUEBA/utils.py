@@ -1,4 +1,4 @@
-import os, time, datetime, logger
+import os, time, logger
 
 #region ######## VALIDATION ########
 def is_mail(text):
@@ -30,14 +30,13 @@ def is_url_or_filename(text):
 
 def check_folders(LOG_DIRECTORY, DIRECTORI_ENTRADA, DIRECTORI_SORTIDA):
     directoris= os.listdir('.')
-    if LOG_DIRECTORY not in directoris:
-        print('ERROR, NO ES POT COMENÇAR PERQUÈ NO ES TROBA EL DIRECTORI DEL LOG')
-    elif DIRECTORI_ENTRADA not in directoris:
+    if DIRECTORI_ENTRADA not in directoris:
         logger.error("CAN'T START: Not able to find input directory")
+        return
     elif DIRECTORI_SORTIDA not in directoris:
-        logger.error("CAN'T START: Not able to find output directory.")
-    else:
-        return True
+        logger.warning("Not able to find output directory. Creating...")
+        os.mkdir(DIRECTORI_SORTIDA)
+    return True
 
 start= time.time()
 def calculate_time(start):

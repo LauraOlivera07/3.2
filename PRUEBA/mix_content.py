@@ -1,6 +1,8 @@
 import os, crazy_words
 
 def mix_file_content(ruta_fitxer_entrada, fitxer):
+    # No se llega a ejecutar en segundo directorio
+    # Solo pilla el primer directorio recursivo
     if os.path.isfile(ruta_fitxer_entrada) and fitxer.endswith('.txt'):
         with open(ruta_fitxer_entrada, mode='rt', encoding='utf-8') as f:
             contingut_boig=[]
