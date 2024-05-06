@@ -9,8 +9,8 @@ def mix_file_content(ruta_fitxer_entrada, fitxer):
             contingut_fitxer= f.readlines()
 
             for line in contingut_fitxer:
-                linea_boja=crazy_words.crazy_text(line).strip()
-                contingut_boig.append(linea_boja + '\n')
+                linea_boja=crazy_words.crazy_text(line)
+                contingut_boig.append(linea_boja)
 
             contingut_exit="".join([str(elem) for elem in contingut_boig])
             return contingut_exit

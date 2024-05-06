@@ -1,4 +1,4 @@
-import logging, os, config
+import logging, os
 
 rawFiles = []
 files = []
@@ -8,14 +8,7 @@ def get_dir_content(DIRECTORI):
     for file in rawFiles:
         files.append(file[len(DIRECTORI) + 1:])
     
-    print(files)
-
     return files
-    # if os.path.isdir(DIRECTORI):
-    #     contingut_directori = os.listdir(DIRECTORI)
-    #     contingut_directori.sort()
-    #     print(contingut_directori)
-    #     return contingut_directori
 
 def getFiles(DIRECTORI):
     contenido = os.listdir(DIRECTORI)

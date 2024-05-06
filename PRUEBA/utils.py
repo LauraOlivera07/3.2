@@ -31,7 +31,7 @@ def is_url_or_filename(text):
 def check_folders(LOG_DIRECTORY, DIRECTORI_ENTRADA, DIRECTORI_SORTIDA):
     directoris= os.listdir('.')
     if DIRECTORI_ENTRADA not in directoris:
-        logger.error("CAN'T START: Not able to find input directory")
+        logger.error("CAN'T START DIRECTORY LISTING: Not able to find input directory")
         return
     elif DIRECTORI_SORTIDA not in directoris:
         logger.warning("Not able to find output directory. Creating...")
